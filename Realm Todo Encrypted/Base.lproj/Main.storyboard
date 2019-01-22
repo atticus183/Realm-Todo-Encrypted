@@ -13,7 +13,7 @@
         <!--Todos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Todos" id="BYZ-38-t0r" customClass="ViewController" customModule="Realm_Todo_Encrypted" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Todos" id="BYZ-38-t0r" customClass="TodoVC" customModule="Realm_Todo_Encrypted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" textLabel="Use-9P-crI" style="IBUITableViewCellStyleDefault" id="hFZ-Rh-MFm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" textLabel="Use-9P-crI" detailTextLabel="u1D-hy-M5o" style="IBUITableViewCellStyleSubtitle" id="hFZ-Rh-MFm">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFZ-Rh-MFm" id="aH7-wQ-S51">
@@ -30,9 +30,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Use-9P-crI">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u1D-hy-M5o">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -51,14 +58,81 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Todos" id="mKe-1a-GTK"/>
+                    <navigationItem key="navigationItem" title="Todos" id="mKe-1a-GTK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="W10-1m-te2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addTodoBtnAction:" destination="BYZ-38-t0r" id="EK8-v4-Cgx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nf6-Gp-L7A" id="bTD-VQ-QGh"/>
+                        <segue destination="xhV-pH-GNS" kind="presentation" identifier="toAddTodoVC" modalPresentationStyle="overCurrentContext" id="Ro5-iP-0ix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+        </scene>
+        <!--Add TodoVC-->
+        <scene sceneID="72o-ra-Vzc">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="xhV-pH-GNS" customClass="AddTodoVC" customModule="Realm_Todo_Encrypted" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHB-KJ-eaf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Todo Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aw6-BP-Bjt">
+                                <rect key="frame" x="16" y="138" width="343" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkG-if-w8Q" customClass="AddTodoBtn" customModule="Realm_Todo_Encrypted" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="204" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.58823529409999997" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ngp-LE-xRn"/>
+                                    <constraint firstAttribute="width" constant="150" id="zcK-SC-Ifh"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTodoBtn:" destination="xhV-pH-GNS" eventType="touchUpInside" id="exM-Z8-D1P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-Rs-KUn">
+                                <rect key="frame" x="311" y="214" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="xhV-pH-GNS" eventType="touchUpInside" id="grr-Mn-Zdg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.88690603595890416" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Aw6-BP-Bjt" firstAttribute="top" secondItem="TVt-cx-NB1" secondAttribute="top" constant="118" id="7MY-eU-Tim"/>
+                            <constraint firstItem="KkG-if-w8Q" firstAttribute="centerX" secondItem="vHB-KJ-eaf" secondAttribute="centerX" id="8SY-Bs-1ac"/>
+                            <constraint firstItem="KkG-if-w8Q" firstAttribute="top" secondItem="Aw6-BP-Bjt" secondAttribute="bottom" constant="36" id="g1Z-Z7-fPg"/>
+                            <constraint firstItem="TVt-cx-NB1" firstAttribute="trailing" secondItem="jZf-Rs-KUn" secondAttribute="trailing" constant="16" id="sgE-QM-BDz"/>
+                            <constraint firstItem="TVt-cx-NB1" firstAttribute="trailing" secondItem="Aw6-BP-Bjt" secondAttribute="trailing" constant="16" id="v4k-Rw-eK8"/>
+                            <constraint firstItem="jZf-Rs-KUn" firstAttribute="centerY" secondItem="KkG-if-w8Q" secondAttribute="centerY" id="ywK-o1-fLy"/>
+                            <constraint firstItem="Aw6-BP-Bjt" firstAttribute="leading" secondItem="TVt-cx-NB1" secondAttribute="leading" constant="16" id="znk-NI-mpd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TVt-cx-NB1"/>
+                    </view>
+                    <connections>
+                        <outlet property="todoTxtField" destination="Aw6-BP-Bjt" id="KgM-NU-gA1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlQ-bF-l0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VWI-sD-8EH">

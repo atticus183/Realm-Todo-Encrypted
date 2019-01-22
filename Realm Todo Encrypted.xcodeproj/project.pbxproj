@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		09184180B39DC3EB0229A473 /* Pods_Realm_Todo_Encrypted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4F08183CF466D6B173C3BA /* Pods_Realm_Todo_Encrypted.framework */; };
 		12450B7621F6CE3A005D349C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B7521F6CE3A005D349C /* AppDelegate.swift */; };
-		12450B7821F6CE3A005D349C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B7721F6CE3A005D349C /* ViewController.swift */; };
+		12450B7821F6CE3A005D349C /* TodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B7721F6CE3A005D349C /* TodoVC.swift */; };
 		12450B7B21F6CE3A005D349C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12450B7921F6CE3A005D349C /* Main.storyboard */; };
 		12450B7D21F6CE3C005D349C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12450B7C21F6CE3C005D349C /* Assets.xcassets */; };
 		12450B8021F6CE3C005D349C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12450B7E21F6CE3C005D349C /* LaunchScreen.storyboard */; };
 		12450B8821F6D144005D349C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B8721F6D144005D349C /* Model.swift */; };
 		12450B8A21F6D240005D349C /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B8921F6D240005D349C /* RealmConfiguration.swift */; };
+		12B00D7321F6D69C009FB8A9 /* AddTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B00D7221F6D69C009FB8A9 /* AddTodoVC.swift */; };
+		12B00D7521F6D7AC009FB8A9 /* AddTodoBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B00D7421F6D7AC009FB8A9 /* AddTodoBtn.swift */; };
+		12B00D7721F6DA75009FB8A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B00D7621F6DA75009FB8A9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,16 @@
 		0A4F08183CF466D6B173C3BA /* Pods_Realm_Todo_Encrypted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_Todo_Encrypted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12450B7221F6CE3A005D349C /* Realm Todo Encrypted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm Todo Encrypted.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12450B7521F6CE3A005D349C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12450B7721F6CE3A005D349C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12450B7721F6CE3A005D349C /* TodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVC.swift; sourceTree = "<group>"; };
 		12450B7A21F6CE3A005D349C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12450B7C21F6CE3C005D349C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12450B7F21F6CE3C005D349C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12450B8121F6CE3C005D349C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12450B8721F6D144005D349C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		12450B8921F6D240005D349C /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
+		12B00D7221F6D69C009FB8A9 /* AddTodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoVC.swift; sourceTree = "<group>"; };
+		12B00D7421F6D7AC009FB8A9 /* AddTodoBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoBtn.swift; sourceTree = "<group>"; };
+		12B00D7621F6DA75009FB8A9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B54F70946DD8E3A08A79FEF7 /* Pods-Realm Todo Encrypted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm Todo Encrypted.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Realm Todo Encrypted/Pods-Realm Todo Encrypted.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,9 +72,12 @@
 			isa = PBXGroup;
 			children = (
 				12450B7521F6CE3A005D349C /* AppDelegate.swift */,
-				12450B7721F6CE3A005D349C /* ViewController.swift */,
+				12450B7721F6CE3A005D349C /* TodoVC.swift */,
+				12B00D7221F6D69C009FB8A9 /* AddTodoVC.swift */,
+				12B00D7421F6D7AC009FB8A9 /* AddTodoBtn.swift */,
 				12450B8721F6D144005D349C /* Model.swift */,
 				12450B8921F6D240005D349C /* RealmConfiguration.swift */,
+				12B00D7621F6DA75009FB8A9 /* Extensions.swift */,
 				12450B7921F6CE3A005D349C /* Main.storyboard */,
 				12450B7C21F6CE3C005D349C /* Assets.xcassets */,
 				12450B7E21F6CE3C005D349C /* LaunchScreen.storyboard */,
@@ -216,10 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12B00D7521F6D7AC009FB8A9 /* AddTodoBtn.swift in Sources */,
 				12450B8A21F6D240005D349C /* RealmConfiguration.swift in Sources */,
 				12450B8821F6D144005D349C /* Model.swift in Sources */,
-				12450B7821F6CE3A005D349C /* ViewController.swift in Sources */,
+				12450B7821F6CE3A005D349C /* TodoVC.swift in Sources */,
+				12B00D7321F6D69C009FB8A9 /* AddTodoVC.swift in Sources */,
 				12450B7621F6CE3A005D349C /* AppDelegate.swift in Sources */,
+				12B00D7721F6DA75009FB8A9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,5 +11,6 @@ import RealmSwift
 
 class Todo: Object {
     @objc dynamic var name = ""
+    @objc dynamic var dateEntered = Date()
     @objc dynamic var isCompleted = false
 }
