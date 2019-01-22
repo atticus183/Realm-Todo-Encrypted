@@ -31,6 +31,9 @@ class TodoVC: UIViewController {
         
         realm = MyRealmConfiguration.getRealm()
         todos = realm?.objects(Todo.self).sorted(byKeyPath: "dateEntered", ascending: true)
+        
+        //removes empty cells in the tableview
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,6 +91,23 @@ extension TodoVC: UITableViewDelegate, UITableViewDataSource {
         
         try! realm?.write {
             todo.isCompleted.toggle()
+        }
+    }
+    
+    
+    //MARK: Delete function
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            guard let todo = todos?[indexPath.row] else { return }
+            guard let realm = realm else { return }
+            
+            try! realm.write {
+                realm.delete(todo)
+            }
         }
     }
     
