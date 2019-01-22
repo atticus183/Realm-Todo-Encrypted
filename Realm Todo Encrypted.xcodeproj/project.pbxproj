@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09184180B39DC3EB0229A473 /* Pods_Realm_Todo_Encrypted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4F08183CF466D6B173C3BA /* Pods_Realm_Todo_Encrypted.framework */; };
 		12450B7621F6CE3A005D349C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B7521F6CE3A005D349C /* AppDelegate.swift */; };
 		12450B7821F6CE3A005D349C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B7721F6CE3A005D349C /* ViewController.swift */; };
 		12450B7B21F6CE3A005D349C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12450B7921F6CE3A005D349C /* Main.storyboard */; };
 		12450B7D21F6CE3C005D349C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12450B7C21F6CE3C005D349C /* Assets.xcassets */; };
 		12450B8021F6CE3C005D349C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12450B7E21F6CE3C005D349C /* LaunchScreen.storyboard */; };
+		12450B8821F6D144005D349C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B8721F6D144005D349C /* Model.swift */; };
+		12450B8A21F6D240005D349C /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12450B8921F6D240005D349C /* RealmConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034A2214FB29F37D90999338 /* Pods-Realm Todo Encrypted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm Todo Encrypted.release.xcconfig"; path = "Pods/Target Support Files/Pods-Realm Todo Encrypted/Pods-Realm Todo Encrypted.release.xcconfig"; sourceTree = "<group>"; };
+		0A4F08183CF466D6B173C3BA /* Pods_Realm_Todo_Encrypted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_Todo_Encrypted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12450B7221F6CE3A005D349C /* Realm Todo Encrypted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm Todo Encrypted.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12450B7521F6CE3A005D349C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12450B7721F6CE3A005D349C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		12450B7C21F6CE3C005D349C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12450B7F21F6CE3C005D349C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12450B8121F6CE3C005D349C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12450B8721F6D144005D349C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		12450B8921F6D240005D349C /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
+		B54F70946DD8E3A08A79FEF7 /* Pods-Realm Todo Encrypted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm Todo Encrypted.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Realm Todo Encrypted/Pods-Realm Todo Encrypted.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09184180B39DC3EB0229A473 /* Pods_Realm_Todo_Encrypted.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				12450B7421F6CE3A005D349C /* Realm Todo Encrypted */,
 				12450B7321F6CE3A005D349C /* Products */,
+				98761E03CDDB3A568052F754 /* Pods */,
+				FC97E88B00ABA7F9EC420E62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +67,31 @@
 			children = (
 				12450B7521F6CE3A005D349C /* AppDelegate.swift */,
 				12450B7721F6CE3A005D349C /* ViewController.swift */,
+				12450B8721F6D144005D349C /* Model.swift */,
+				12450B8921F6D240005D349C /* RealmConfiguration.swift */,
 				12450B7921F6CE3A005D349C /* Main.storyboard */,
 				12450B7C21F6CE3C005D349C /* Assets.xcassets */,
 				12450B7E21F6CE3C005D349C /* LaunchScreen.storyboard */,
 				12450B8121F6CE3C005D349C /* Info.plist */,
 			);
 			path = "Realm Todo Encrypted";
+			sourceTree = "<group>";
+		};
+		98761E03CDDB3A568052F754 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B54F70946DD8E3A08A79FEF7 /* Pods-Realm Todo Encrypted.debug.xcconfig */,
+				034A2214FB29F37D90999338 /* Pods-Realm Todo Encrypted.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC97E88B00ABA7F9EC420E62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A4F08183CF466D6B173C3BA /* Pods_Realm_Todo_Encrypted.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12450B8421F6CE3C005D349C /* Build configuration list for PBXNativeTarget "Realm Todo Encrypted" */;
 			buildPhases = (
+				97D9091AB2210DCA3C906927 /* [CP] Check Pods Manifest.lock */,
 				12450B6E21F6CE3A005D349C /* Sources */,
 				12450B6F21F6CE3A005D349C /* Frameworks */,
 				12450B7021F6CE3A005D349C /* Resources */,
+				F16CBA5C82E80808C0015101 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +162,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97D9091AB2210DCA3C906927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Realm Todo Encrypted-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16CBA5C82E80808C0015101 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Realm Todo Encrypted/Pods-Realm Todo Encrypted-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Realm Todo Encrypted/Pods-Realm Todo Encrypted-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12450B6E21F6CE3A005D349C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12450B8A21F6D240005D349C /* RealmConfiguration.swift in Sources */,
+				12450B8821F6D144005D349C /* Model.swift in Sources */,
 				12450B7821F6CE3A005D349C /* ViewController.swift in Sources */,
 				12450B7621F6CE3A005D349C /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +363,7 @@
 		};
 		12450B8521F6CE3C005D349C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54F70946DD8E3A08A79FEF7 /* Pods-Realm Todo Encrypted.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +382,7 @@
 		};
 		12450B8621F6CE3C005D349C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 034A2214FB29F37D90999338 /* Pods-Realm Todo Encrypted.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
